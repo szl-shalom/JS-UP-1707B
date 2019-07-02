@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第二单元日考测试</title>
+</head>
+
+<body>
+    <div id="demo">123</div>
+    <ul id="list">
+        <li class="one">列表项内容</li>
+        <li id="item2">列表项内容</li>
+        <li>列表项内容</li>
+        <li>列表项内容</li>
+        <li>列表项内容</li>
+        <li>列表项内容</li>
+        <li>列表项内容</li>
+        <li>列表项内容</li>
+        <li>列表项内容</li>
+        <li>列表项内容</li>
+        <li>列表项内容</li>
+        <li>列表项内容</li>
+        <li>列表项内容</li>
+        <li>列表项内容</li>
+    </ul>
+    <li>dadadadada</li>
+
+    <script>
+        // 1．获取id名为demo的元素，并在控制台打印输出（20分）
+        var a = document.getElementById("demo")
+        console.log(a)
+        // 2．获取UL下的所有LI元素，并在控制台打印输出LI的总个数（20分）
+        var list = document.getElementById("list")
+        var li = list.getElementsByTagName("li")
+        console.log(li.length)
+        // 3．获取第2个LI的id名，弹框方式输出（20分）
+        var b = li[1].id
+        alert(b)
+   
+        // 4．获取第1个LI的class名，弹框方式输出（20分）
+   
+        // 5．设置第3个LI的class名为item3（20分）
+     
+    </script>
+</body>
+
+</html>

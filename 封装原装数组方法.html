@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 功能一
+        // 封装数组 indexOf(arr,data) 方法   arr为查询的数组  data为查询数组中的元素   
+        // 功能  找到数组中的 data 元素 返回该元素的下标  找不到返回-1 
+        // indexOf([1,2,3,4],2)  => 1
+        // indexOf([1,2,3,4],5)  => -1
+        // indexOf([1,2,3,4])  => -1
+
+        function indexOf(arr, data) {
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] === data)
+                    return i
+            }
+            return -1
+        }
+        // console.log(indexOf([1, 2, 3, 4],5))
+
+        // 功能二
+        // 封装数组 concat(arr) 方法   arr为拼接的数组  不限制参数   
+        // 提示  Array.isArray(arr) 参数 arr是数组返回true  不是数组返回 false
+        // var arr = [1,2,3]
+        // concat(arr,4,5,6,7) =>[1,2,3,4,5,6,7]
+        // concat(arr,[4],[5],[6],[7]) =>[1,2,3,4,5,6,7]
+        // console.log(arr) =>[1,2,3]
+        function concat(arr) {
+            var arr1 = slice(arr)
+            for (var i = 1; i < arguments.length; i++) {
+                if (Array.isArray(arguments[i])) {
+                    // 是数组
+                    for (var j = 0; j < arguments[i].length; j++) {
+                        push(arr1, arguments[i][j])
+                    }
+                } else {
+                    // 不是数组
+                    push(arr1, arguments[i])
+                }
+            }
+            return arr1
+        }
+
+
+        console.log(concat([1, 2, 3, 4], 5, [6, 7, 8, 9], 10, 11, 12, [13, 14, 15]))
+        // 功能三 
+        // 封装数组 join(arr,separator) 方法  
+        // join([1,2,3,4,5,6,7])   => "1,2,3,4,5,6,7"
+        // join([1,2,3,4,5,6,7],"-")   => "1-2-3-4-5-6-7"
+
+        function join(arr, separator) {
+            separator = separator === undefined ? "," : separator
+            var str = ''
+            for (var i = 0; i < arr.length; i++) {
+                if (i === arr.length - 1) {
+                    str += arr[i]
+                } else {
+                    str += arr[i] + separator
+                }
+
+            }
+            return str
+        }
+
+        // console.log(join([1, 2, 3, 4, 5], ""))
+
+
+        // 功能四
+        // 封装数组 push(arr) 方法   arr为推入的原数组  不限制参数 
+        // var arr = [1,2,3,4]
+        // push(arr) => 4
+        // push(arr,5,6) => 6
+        // push(arr,[5,6]) => 7
+        // console.log(arr)  => [1,2,3,4,5,6,[5,6]]
+
+        function push(arr) {
+            // arr原数组  
+
+            for (var i = 1; i < arguments.length; i++) {
+                arr[arr.length] = arguments[i]
+            }
+
+            return arr.length
+        }
+
+        // var arr = [1, 2, 3, 4]
+        // console.log(push(arr)) //=> 4
+        // console.log(push(arr, 5, 6)) //=> 6
+        // console.log(push(arr, [5, 6])) //=> 7
+        // console.log(arr)  //=> [1,2,3,4,5,6,[5,6]]
+
+        // var arr = []
+        // arr[arr.length] = 1
+        // arr[arr.length] = 2
+        // arr[arr.length] = 3
+        // arr[arr.length] = 4
+        // console.log(arr)
+
+        // 功能五
+        // 封装数组 pop(arr) 方法   arr为删除的原数组
+        // var arr = [1,2,3,4]
+        // pop(arr) => 4
+        // pop(arr) => 3
+        // pop(arr) => 2
+        // console.log(arr) =>[1]
+
+        // function pop(arr) {
+        //     var data = arr[arr.length - 1]
+        //     arr.length = arr.length - 1
+        //     return data
+        // }
+
+        // var arr = [1, 2, 3, 4]
+        // pop(arr) //=> 4
+        // pop(arr) //=> 3
+        // pop(arr) //=> 2
+        // console.log(arr) //=>[1]
+
+        // 功能六
+        // 封装数组 reverse(arr) 方法   arr为删除的原数组
+        // var arr = [1,2,3,4]
+        // reverse(arr) => [4,3,2,1]
+        // console.log(arr) =>[4,3,2,1]
+
+
+
+        // function reverse(arr) {
+        //     for (var i = 0; i < parseInt(arr.length / 2); i++) {
+        //         var flag = arr[i]
+        //         arr[i] = arr[arr.length - 1 - i]
+        //         arr[arr.length - 1 - i] = flag
+        //     }
+        //     return arr
+        // }
+
+        // var arr = [1, 2, 3, 4, 5]
+        // console.log(reverse(arr))
+        // console.log(arr)
+
+
+
+
+        // 功能七
+        // 封装数组 slice(this) 方法   arr为删除的原数组
+        // var arr = [1,2,3,4]
+        // slice(arr) => [1,2,3,4]
+        // slice(arr,1,3) => [2,3]
+        // console.log(arr) =>[1,2,3,4]
+
+        // function slice(arr, start, end) {
+        //     start = start || 0
+        //     end = end || arr.length
+        //     var arr1 = []
+        //     for (var i = start; i < end; i++) {
+        //         push(arr1, arr[i])
+        //     }
+        //     return arr1
+        // }
+
+        // console.log(slice([1, 2, 3, 4, 5, 6], 1, 4))
+
+
+
+        // 功能8
+        // 封装 splice()方法
+
+        function splice(arr, start, length) {
+            var arr2 = []  //插入项后面数据
+            var arr1 = []  //删除数据
+
+            // 插入项后面的数组
+            for (var i = arr.length - 1; i >= start + length; i--) {
+                arr2.unshift(arr.pop())
+            }
+            // console.log(arr)
+            // console.log(arr2)
+
+            // 
+            for (var i = start; i < start + length; i++) {
+
+            }
+
+
+            return
+        }
+        var a = [1, 2, 3, 4, 5, 6, 7]
+        splice(a, 2, 3)
+        // console.log(a)
+
+
+    </script>
+</body>
+
+</html>

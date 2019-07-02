@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        width: 500px;
+        overflow: hidden;
+        height: 200px;
+        position: relative;
+    }
+
+    li {
+        width: 300px;
+        height: 200px;
+        list-style: none;
+        float: left;
+        transition: left 1s;
+        position: absolute;
+    }
+
+    li:nth-child(1) {
+        left: 0;
+    }
+
+    li:nth-child(2) {
+        left: 50px;
+    }
+
+    li:nth-child(3) {
+        left: 100px;
+
+    }
+
+    li:nth-child(4) {
+        left: 150px;
+
+    }
+
+    li:nth-child(5) {
+        left: 200px;
+
+    }
+</style>
+
+<body>
+    <ul>
+        <li style="background:red"></li>
+        <li style="background:yellow"></li>
+        <li style="background:green"></li>
+        <li style="background:yellowgreen"></li>
+        <li style="background:blue"></li>
+    </ul>
+    <script>
+        var lis = document.querySelectorAll("li")
+        addEvent()
+        function resetAddEvent() {
+            lis
+        }
+        function addEvent() {
+            lis.forEach((item, index) => {
+                item.onmouseenter = () => {
+                    setWidth(index)
+                }
+            })
+        }
+        function setWidth(index) {
+            lis.forEach(function (item, ind) {
+                item.style.left = ind <= index ? ind * 50 + 'px' : (ind * 50 + 250) + 'px';
+            })
+        }
+
+    </script>
+</body>
+
+</html>

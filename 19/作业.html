@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.判断字符串是否对称
+        // console.log(check("12321")) => true
+        // console.log(check("123453")) => false
+
+        // function check(str) {
+        // 方式一
+        // for (var i = 0; i < str.length / 2; i++) {
+        //     if (str[i] != str[str.length - 1 - i]) {
+        //         return false
+        //     }
+        // }
+        // return true
+        // 方式二
+        // return str.split("").reverse().join("") === str
+        // }
+
+        // console.log(check("123321"))
+
+        //2.封装一个方法,实现求任意多个数的平均值
+
+        // console.log(sum(2,3,4)); => 3 
+        // console.log(sum(5,6,7,8,9)); => 7
+        //  function sum(){
+        //      var num = 0
+        //      for(var i = 0;  i < arguments.length; i++){
+        //         num += arguments[i]
+        //      }
+        //      return num/arguments.length
+        //  }
+        //  console.log(sum(2,3,4))
+
+
+        //3. 一位数组转化为二位数组
+        // console.log(fn([1, 2, 3, 4, 5, 6, 7], 2))  => [[1, 2], [3, 4], [5, 6], [7]]
+        // console.log(fn([1, 2, 3, 4, 5, 6, 7], 3)) // => [[1, 2, 3], [4, 5 , 6], [7]]
+
+        // function fn(arr, len) {
+            // var a = []
+            // for (var i = 0; i < arr.length; i += len) {
+            //     a.push(arr.slice(i, i + len))
+            // }
+            // return a
+
+            // var a = []
+            // var bb = arr.length / len
+            // for (var i = 0; i < bb; i++) {
+            //     a.push(arr.splice(0, len))
+            // }
+            // return a
+
+        // }
+
+
+        //4. 二位数组转化为一位数组
+        // fn([[1,2,3],[4,5,6],[7]])  => [1,2,3,4,5,6,7]
+
+
+
+        // function fn(arr) {
+            // var a = []
+            // arr.forEach(function (item) {
+            //     a = a.concat(item)
+            // })
+            // return a
+
+            // return arr.flat()
+        // }
+
+        // console.log(fn([[1, 2, 3], [4, 5, 6], [7]]))
+
+    </script>
+</body>
+
+</html>

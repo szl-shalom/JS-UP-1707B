@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        div {
+            width: 500px;
+            height: 30px;
+            line-height: 30px;
+            margin: 0 auto;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #list {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        #list li {
+            width: 500px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 20px;
+
+        }
+
+        #list li.active:hover {
+            background: goldenrod;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div>《诗经.桃夭》</div>
+    <ul id="list">
+        <li>桃之夭夭，灼灼其华</li>
+        <li>宜其室家</li>
+        <li>桃之夭夭，有蕡其实</li>
+        <li>之子于归，宜其家室</li>
+        <li>桃之夭夭，其叶蓁蓁</li>
+        <li>之子于归，宜其家人</li>
+    </ul>
+    <script>
+        //1.将ul的背景改成 ‘#2bb8aa’
+        document.getElementById("list").style.background = "#2bb8aa"
+        //2.将第一个li的背景改成‘pink’
+        document.getElementsByTagName("li")[0].style.background = "pink"
+        //3.给最后一个li添加上类名 ‘active’
+        var li = document.getElementsByTagName("li")
+        var index = li.length - 1
+        li[index].className = "active"
+        //4.将第二个li的内容开头补上‘之子于归，
+        var a = li[1].innerHTML
+        li[1].innerHTML = "之子于归，" + a
+    </script>
+</body>
+
+</html>

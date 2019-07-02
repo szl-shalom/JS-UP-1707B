@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        `
+
+            # 第2题
+            在二维平面上，有一个机器人从原点 (0, 0) 开始，给出它的移动顺序，判断这个机器人在完成移动后是否在 (0, 0) 处结束。
+
+            移动顺序由字符串表示。机器人的有效动作有 R（右），L（左），U（上）和 D（下）。如果机器人在完成所有动作后返回原点，则返回 true。否则，返回 false。
+
+            示例 1:
+
+                    输入: "UD"
+                    输出: true
+                    解释：机器人向上移动一次，然后向下移动一次。所有动作都具有相同的幅度，因此它最终回到它开始的原点。因此，我们返回 true。
+
+            示例 2:
+
+                    输入: "LL"
+                    输出: false
+                    解释：机器人向左移动两次。它最终位于原点的左侧，距原点有两次 “移动” 的距离。我们返回 false，因为它在移动结束时没有返回原点。
+
+
+            注意：机器人“面朝”的方向无关紧要。 “R” 将始终使机器人向右移动一次，“L” 将始终向左移动等。此外，假设每次移动机器人的移动幅度相同。
+          
+        `
+
+        // function check(str) {
+        //     var U = 0, D = 0, L = 0, R = 0;
+        //     for (var i = 0; i < str.length; i++) {
+        //         switch (str[i]) {
+        //             case "U": U++; break;
+        //             case "D": D++; break;
+        //             case "L": L++; break;
+        //             case "R": R++; break;
+        //         }
+        //     }
+        //     return (U === D && L === R)
+        // }
+
+        // console.log(check("LL"))
+
+        // function fn(a) {
+        //     var b = []
+        //     for (var i = 0; i < a.length; i++) {
+        //         if (!isNaN(a[i])) {
+        //             b.push(a[i] + 10)
+        //         } else {
+        //             b.push(a[i])
+        //         }
+
+        //     }
+        //     return b
+        // }
+
+        // var arr = [1, 2, 3, 4, 5, "a", "b"]
+        // console.log(fn(arr))
+
+        // 封装一个函数  函数的作用去除字符串两个空格 
+
+        // function aa(str) {
+        //     var bb = ""
+        //     for (var i = 0; i < str.length; i++) {
+        //         if (str[i] !== " ") {
+        //             bb += str[i]
+        //         }
+        //     }
+        //     return bb
+
+        // }
+        // console.log(aa("   12  3  1   23  "))
+
+
+        // function trim(str) {
+        //     var start, end
+        //     for (var i = 0; i < str.length; i++) {
+        //         if (str[i] !== " ") {
+        //             start = i
+        //             break
+        //         }
+        //     }
+
+        //     for (var i = str.length - 1; i >= 0; i--) {
+        //         if (str[i] !== " ") {
+        //             end = i
+        //             break
+        //         }
+        //     }
+
+        //     return str.slice(start, end + 1)
+        // }
+
+        // console.log(trim("a         c        b"))
+
+        // 声明一个数组  
+        // 封装一个函数  
+    </script>
+</body>
+
+</html>

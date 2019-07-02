@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 1语法解析
+        // 2预编译
+        // 2.1创建AO|GO对象
+        // 2.2将形参和变量声明赋值为undefined
+        // 2.3实参和形参的值相统一
+        // 2.4函数提升并赋值为函数体
+        // 3解析执行
+
+
+
+
+
+        // 案例1: 
+        // console.log(num); // ?  
+        // var num = 2;
+        // console.log(num); // ?  
+
+        // 案例2:
+        // var num = 2;
+        // var num;
+        // console.log(num); // 
+
+        // 案例3:
+        // function f() {}
+        // var f;
+        // console.log(f); // ?
+
+
+        // 案例4:  
+        // var f = function () {
+        //     console.log(1);
+        // }
+
+        // function f() {
+        //     console.log(2);
+        // }
+        // f(); // ?
+
+        // GO={
+        //     f:function(){
+        //         console.log(1);
+        //     }
+        // }
+        // 案例5:
+        // f(); // ?
+        // var f = function () {
+        //     console.log(1)
+        // }
+
+        // function f() {
+        //     console.log(2)
+        // }
+
+
+
+
+
+        // 案例6:
+        // f(); //?
+        // var f = function () {
+        //     console.log('k')
+        // }
+
+
+        // GO={
+        //     f:undefined
+        // }
+        // 案例7:
+        // num = 2;
+        // console.log(num); // ? 
+
+        // 案例8:
+
+        // function f() {
+        //     var num = 3;
+
+        // }
+        // console.log(f())
+        // console.log(num); // ?
+
+
+
+
+        // 案例9: 
+        // function f() {
+        //     num = 3;
+        // }
+
+        // console.log(num); // ?  
+        // f();
+
+
+        // // 案例10:
+        // var num = 2;
+
+        // function f() {
+        //     num = 1;
+        //     console.log(num); // ？ 1
+        //     return;
+        //     var num = 3;
+        // }
+        // f();
+        // console.log(num); // ？ 2
+        // // 
+
+
+
+
+
+        // 案例11:
+        // var b = 5;
+
+        // function fn() {
+        //     var a;
+
+        //     function fn1() {
+        //         console.log(a, b);
+        //     }
+        //     fn1();
+        //     a = 3;
+        // }
+        // fn();
+        // 案例12:
+
+        // function fn(a, b) {
+        //     function fn1(c) {
+        //         var b = 8;
+        //         console.log(a + b + c); // ? 24
+        //     }
+        //     fn1(a + b);
+
+        // }
+        // console.log(fn(3, 10)); // ?  undefined
+        // var a;
+        // function a(){
+
+        // }
+        // console.log(a)
+
+
+
+        // function fn() {
+        //     var a = 1
+        //     return function () {
+        //         console.log(a)
+        //     }
+        // }
+        // fn()()
+
+
+
+
+
+
+        // 举个栗子 1
+        // var a = 10;
+        // function test(){
+        //      a = 100;
+        //      console.log(a);
+        //      console.log(this.a);
+        //      var a;
+        //      console.log(a);
+        //  }
+        //  test();
+        //  举个栗子 2
+        //  var a = 100;
+        //  function test(){
+        //      console.log(a);
+        //      var a = 10;
+        //      console.log(a);
+        //  }
+        // test();
+        //  举个栗子 3
+
+        // var a = 100;
+        // function test(){
+        //     console.log(a);
+        //      a = 10;
+        //      console.log(a);
+        //  }
+        //  test();
+        //  console.log(a);
+
+
+
+
+
+        // 封装一个函数 fn
+        // 函数有两个参数  start , end 
+        // 函数的功能 控制台打印 start - end 之间所有数字的和
+        // fn(1,10) => 55
+
+        // function fn(start, end) {
+        //     var sum = 0;
+        //     for (; start <= end; start++) {
+        //         sum += start
+        //     }
+        //     return sum
+        // }
+
+        // console.log(fn(1, 10))
+
+
+        /**案例2:
+                * 封装一个函数，检测任意个参数的类型
+                * 如果是数字则相加，如果是字符串则拼接，其它类型不执行任何操作
+                * 最后将数字相加的结果拼接在字符串后面，用‘|’隔开 ,并返回
+                */
+        // function fn() {
+        //     var sum = 0;
+        //     var str = "";
+        //     for (var i = 0; i < arguments.length; i++) {
+        //         if (typeof arguments[i] === "number") {
+        //             sum += arguments[i]
+        //         }
+
+        //         if (typeof arguments[i] === "string") {
+        //             str += arguments[i]
+        //         }
+        //     }
+
+        //     return str + "|" + sum
+        // }
+
+        // console.log(fn(1, 2, 3, false, null, "2", "3"))
+
+        /*案例3:封装一个函数，对传过来的参数进行判断，返回参数的类型*/
+        // 如果没有参数，默认返回false
+        // 如果参数是string，返回 '字符串'
+        // 如果参数是number，返回'数字'
+        // 如果是boolean，ture返回'真'，false返回'假'（使用三元运算符）
+        // 如果是undefined，返回'未定义'
+        // 如果不是以上判断的几种情况，返回null
+        // function fn(a) {
+        // if (!arguments.length) {
+        //     return false
+        // } else if (typeof a === "string") {
+        //     return "字符串"
+        // } else if (typeof a === "number") {
+        //     return "数字"
+        // } else if (typeof a === "boolean") {
+        //     var b = a ? "真" : "假"
+        //     return b
+        // } else if (typeof a === "string") {
+        //     return "字符串"
+        // } else if (typeof a === "undefined") {
+        //     return "未定义"
+        // } else {
+        //     return null
+        // }
+
+
+        // if (!arguments.length) {
+        //     return false
+        // }
+
+        // switch (typeof a) {
+        //     case "string":
+        //         return "字符串"
+        //     case "number":
+        //         return "数字"
+        //     case "boolean":
+        //         var b = a ? "真" : "假"
+        //         return b
+        //     case "undefined":
+        //         return "未定义"
+        //     default:
+        //         return null
+        // }
+        // }
+        // console.log(fn())
+
+        // 案例四  封装无数个数字的和
+
+        // test(); 
+        // function test() { console.log(1) }
+
+        // var running = function () { console.log('eating') }
+        //  running = 'run'; 
+        //  running();
+
+        // var run = function(){ console.log(run)}
+        // run = function () { console.log(123) }
+        // run()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // < !--案例2-->
+        //案例1：根据用户输入的分数进行评级 
+        //         使用switch//0-60  不及格  60-70 合格  70-85 良好 85以上优秀
+        // var num = prompt("")
+        // 在条件判断 
+        // 逻辑与 全真则真 一假则假
+        // 逻辑或 全假则假 一真则真
+
+        // switch (true) {
+        //     case num >= 0 && num < 60:
+        //         alert("不及格")
+        //         break
+        //     case num >= 60 && num < 70:
+        //         alert("合格")
+        //         break
+
+        //     case num >= 70 && num < 85:
+        //         alert("良好")
+        //         break
+
+        //     case num >= 85:
+        //         alert("优秀")
+        // }
+
+
+
+        // < !--案例3-->//检测变量a的数据类型
+        //  使用switch//是字符串弹出'字符串'//
+        // 是数字: 
+        // 再判断是正数弹出'正数',负数弹出'负数',否则弹出'NaN'(使用if)
+        //是布尔值: 
+        // 再判断是true弹出'真',false弹出'假'(三元)//
+        // 是undefined弹出'未定义'//是对象:
+        // 再判断是null弹出'空',否则弹出'对象'(使用三元运算符)
+        var a = {};
+        switch (typeof a) {
+            case "number":
+                // 说明是数字
+                // alert("数字")
+                if (a > 0) {
+                    alert("正数")
+                } else if (a < 0) {
+                    alert("负数")
+                } else {
+                    alert(NaN)
+                }
+                break
+            case "string":
+                // 说明是字符串
+                alert("字符串")
+                break
+            case "boolean":
+                // 说明是布尔
+                // alert("布尔")
+                a ? alert("真") : alert("假")
+                break
+            case "object":
+                // 说明是对象
+                // alert("对象")
+                a === null ? alert("空") : alert("对象")
+
+                break
+            case "undefined":
+                // 说明是undefined
+                alert("未定义")
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    h1 {
+        text-align: center
+    }
+</style>
+
+<body>
+    <h1 id="h1"></h1>
+    <script>
+        // 对象
+        // {}
+        // 对象定义  2种方式
+        // var obj = {}  //对象字面量
+        // var obj1 = new Object({})  //通过构造函数创建
+        // 对象的属性和方法
+        // 属性与属性值之间用冒号隔开
+        // 属性与属性之间用逗号隔开
+        // var obj = {
+        //     name: "张三",
+        //     age: 18,
+        //     sayName: function () {
+        //         console.log(obj.name)
+        //     }
+        // }
+        // console.log(obj)
+        // 获取值和修改至  2中方式
+        // 获取
+        // 对象名.属性名|方法名
+        // 对象名["属性名|方法名"]
+        // 修改
+        // 对象名.属性名|方法名 = 值
+        // 对象名["属性名|方法名"] = 值
+        // console.log(obj.age)
+        // obj["age"] = 20
+        // console.log(obj.age)
+
+        // 声明对象 obj
+        // 对象上有三个属性 
+        // name属性 是你的名字
+        // age属性  你的年龄
+        // sex属性  你的性别
+        // var obj = {}
+        // // 给上面的对象加一个方法 
+        // // sayInfo
+        // // 给对象增加属性和方法
+        // obj.name = "张三"
+        // obj["age"] = 18
+        // obj.sex = "男"
+        // obj.sayInfo = function () { }
+
+
+        // // 删除属性  delete 对象.属性名|方法名
+
+        // delete obj.sex
+
+        // console.log(obj)
+
+        // 举个栗子
+
+        // var a = "age"
+        // var obj = {}
+        // obj[a] = "张三"
+        // console.log(obj)
+
+
+        // // 定义一个空对象obj 使用构造函数定义
+        // var obj = new Object({})
+        // // 给obj添加属性 name
+        // obj.name = "张三"
+        // // 添加obj方法sayName 方法的作用 弹出你的名字
+        // obj.sayName = function () {
+        //     alert(obj.name)
+        // }
+        // // 调用sayName 方法
+        // obj.sayName()
+
+        // 日期对象 
+        // var a = new Date()  //当前日期
+        // // console.log(a)
+        // // 获取年
+        // var year = a.getFullYear()
+        // // 获取月
+        // var month = a.getMonth()
+        // // 获取几号
+        // var date = a.getDate()
+        // // 获取星期
+        // var day = a.getDay()
+        // // 获取小时
+        // var hour = a.getHours()
+        // // 获取分钟
+        // var min = a.getMinutes()
+        // // 获取秒
+        // var sec = a.getSeconds()
+        // // 获取毫秒
+        // var mSec = a.getMilliseconds()
+        // // 获取时间戳
+        // // 从1970年1月1号凌晨到现在的毫秒数
+        // var time = a.getTime()
+        // var time1 = +a
+        // // console.log(time)
+        // // console.log(time1)
+        // // console.log(year)
+        // // console.log(month)
+        // // console.log(date)
+        // // console.log(day)
+        // console.log(hour)
+        // console.log(min)
+        // console.log(sec)
+        // console.log(mSec)
+        // 设置日期
+        // a.setDate(1)
+        // a.setFullYear(2018)
+        // console.log(a)
+
+        // 1使用for循环  10亿次
+        // 输出运算的时间
+
+        // var date1 = new Date()
+        // for (var i = 1; i < 1000000000; i++) {
+
+        // }
+        // var date2 = new Date()
+        // console.log(date2 - date1)
+
+        // 2 封装函数 倒计时功能
+
+
+        // var furTime = new Date(2019, 4, 23)
+        // console.log(furTime)
+        // var h1 = document.getElementById("h1")
+        // setInterval(function () {
+        //     var currTime = new Date()
+
+        //     var time = furTime - currTime
+
+        //     var date = new Date(time)
+
+        //     var year = date.getFullYear()
+        //     var month = date.getMonth()
+        //     var dd = date.getDate()
+        //     var hour = date.getHours()
+        //     var min = date.getMinutes()
+        //     var sec = date.getSeconds()
+
+        //     h1.innerHTML = `距离倒计时还有${year - 1970}年${month}月${dd - 1}日${hour - 8}小时${min}分钟${sec}秒`
+
+
+        //     console.log(date)
+        // }, 1000)
+
+        var a = new Date(0)
+        console.log(a)
+
+
+
+
+
+
+
+
+
+        // console.log(obj)
+
+
+
+
+        // var date = new Date(2018, 11)
+        // console.log(date)
+
+
+
+
+
+        // 函数
+        // var i = 1
+        // setInterval(function () {
+        //     console.log(i++)
+        // }, 1000)
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

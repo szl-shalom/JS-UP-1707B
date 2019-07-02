@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  *弹出输入框判断用户是否输入值，
+        //  *没输入内容：弹出提示框“请刷新页面重新输入动作”
+        //  *输入内容：再判断是不是数字：
+        //  *不是数字：弹出提示框“只允许输入数字”
+        //  *是数字：弹出第二个输入框要求输入运算的第二个值，依次再判断是否输入内容，是否为数字，与第一个值判断一致
+        //  *当第1及第2个值都输入后再弹出第三个输入框，要求输入运算符，通过switch语句分别判断：
+        //  *如果是”+”号，则执行加法运算并alert运算结果
+        //  *如果是”-”号，则执行减法运算并alert运算结果
+        //  *如果是”*”号，则执行乘法运算并alert运算结果
+        //  *如果是”/”号，则执行除法运算并alert运算结果
+        //  *其它符号，则alert “很遗憾，你输入的运算超出了运算范围
+        var num1 = prompt("请输入第一个数字")  //获取第一个数字
+        if (num1 == "") {
+            // 判断是否为空   为空
+            alert("请刷新页面重新输入动作")
+        } else if (isNaN(num1)) {
+            // 判断是不是数字  非数字
+            alert("只允许输入数字")
+        } else {
+            // 说明第一个非空  而且是数字
+            var num2 = prompt("请输入第二个数字")
+            if (num2 == "") {
+                // 第二个数字 是空
+                alert("请刷新页面重新输入动作")
+            } else if (isNaN(num2)) {
+                // 第二值 是非数字
+                alert("只允许输入数字")
+            } else {
+                // 说明第二个非空  而且是数字
+                var sp = prompt("请输入运算符")
+                if (sp == "+") {
+                    alert(+num1 + +num2)
+                } else if (sp == "-") {
+                    alert(+num1 - +num2)
+                } else if (sp == "*") {
+                    alert(+num1 * +num2)
+                } else if (sp == "/") {
+                    alert(+num1 / +num2)
+                }
+
+            }
+        }
+    </script>
+</body>
+
+</html>

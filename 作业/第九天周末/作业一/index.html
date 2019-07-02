@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<input type="text" id="user" placeholder="请输入手机号">
+<input type="text" id="password" placeholder="请输入密码">
+<button id="submit">添加数据</button>
+
+
+<table border="1">
+    <tr>
+        <th>手机号</th>
+        <th>密码</th>
+    </tr>
+</table>
+
+<body>
+    <script>
+        document.getElementById("submit").onclick = function () { // 给按钮添加点击事件
+            var userValue = document.getElementById("user").value
+            var pwdValue = document.getElementById("password").value
+            // 补全代码    // 请用JS实现以下功能
+
+            var table = document.getElementsByTagName("table")[0]
+
+
+
+
+
+
+
+            if (userValue.length !== 11 && isNaN(userValue)) {
+                // 要求手机号为11位数字  不是11位数字弹出 手机号格式不正确，请重新输入 (25分)
+                alert("手机号格式不正确")
+            } else if (pwdValue[0] !== "$" && pwdValue[0] !== "_") {
+                // 要求密码首位必须以$或_开头  不是数字开头弹出 密码格式不正确，请重新输入 (25分)
+                alert("密码格式不正确")
+            } else {
+                // 当以上条件成立,将手机号和密码加入table表格中 (25分)
+                table.innerHTML += `
+                <tr>
+                    <td>${userValue}</td>
+                    <td>${pwdValue}</td>
+                </tr>
+                `
+                // 加入的数据为偶数行的时候，背景颜色为红色  (25分)
+                var trs = document.getElementsByTagName("tr")
+                for (var i = 1; i < trs.length; i++) {
+                    if(i % 2 == 0){
+                        trs[i].style.background = "red"
+                    }else{
+                        trs[i].style.background = "blue"
+                    }
+                }
+
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>

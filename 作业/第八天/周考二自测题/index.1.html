@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #list {
+            width: 840px;
+            /* height: 360px; */
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #list li {
+            width: 200px;
+            height: 180px;
+            float: left;
+            margin-left: 10px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        #list li img {
+            width: 100%;
+        }
+
+        li div.num {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: orangered;
+            color: aliceblue;
+            font-size: 24px;
+            font-weight: bold;
+            left: 0;
+            top: 0;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        #sel {
+            width: 150px;
+            height: 40px;
+            border: 2px solid skyblue;
+            border-radius: 5px;
+            position: fixed;
+            left: 20%;
+        }
+
+        li div.aword {
+            position: absolute;
+            width: 100px;
+            height: 40px;
+            background: orangered;
+            color: aliceblue;
+            font-size: 24px;
+            font-weight: bold;
+            right: 0;
+            top: 0;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <select id="sel">
+        <option value="">--请设置奖品等级--</option>
+        <option value="一等奖">一等奖</option>
+        <option value="二等奖">二等奖</option>
+        <option value="三等奖">三等奖</option>
+        <option value="四等奖">四等奖</option>
+        <option value="五等奖">谢谢惠顾</option>
+    </select>
+    <ul id="list">
+        <li><img src="img/1.jpg" alt="一等奖">
+            <div class="num">1</div>
+            <div class="aword"></div>
+        </li>
+        <li><img src="img/1.jpg" alt="三等奖">
+            <div class="num">4</div>
+            <div class="aword"></div>
+        </li>
+        <li><img src="img/1.jpg" alt="一等奖">
+            <div class="num">5</div>
+            <div class="aword"></div>
+        </li>
+        <li><img src="img/1.jpg" alt="三等奖">
+            <div class="num">6</div>
+            <div class="aword"></div>
+        </li>
+        <li><img src="img/1.jpg" alt="谢谢惠顾">
+            <div class="num">7</div>
+            <div class="aword"></div>
+        </li>
+        <li><img src="img/1.jpg" alt="三等奖">
+            <div class="num">8</div>
+            <div class="aword"></div>
+        </li>
+        <li><img src="img/1.jpg" alt="二等奖">
+            <div class="num">2</div>
+            <div class="aword"></div>
+        </li>
+        <li><img src="img/1.jpg" alt="二等奖">
+            <div class="num">9</div>
+            <div class="aword"></div>
+        </li>
+        <li><img src="img/1.jpg" alt="谢谢惠顾">
+            <div class="num">10</div>
+            <div class="aword"></div>
+        </li>
+        <li><img src="img/1.jpg" alt="三等奖">
+            <div class="num">11</div>
+            <div class="aword"></div>
+        </li>
+        <li><img src="img/1.jpg" alt="二等奖">
+            <div class="num">12</div>
+            <div class="aword"></div>
+        </li>
+        <li><img src="img/1.jpg" alt="二等奖">
+            <div class="num">13</div>
+            <div class="aword"></div>
+        </li>
+        <li><img src="img/1.jpg" alt="二等奖">
+            <div class="num">3</div>
+            <div class="aword"></div>
+        </li>
+    </ul>
+
+    <script>
+        /*
+         * 功能: 给对应编号的惊喜盒子设置不同等级的奖品
+         * 1. 从下拉列表中选中要设置的奖品等级(此功能代码已给出，补全下面功能的代码)
+         * 2. 选中对应的奖品等级后,弹出一个输入框,输入需要设置奖品的惊喜盒子编号
+         * 3. 将输入的编号和惊喜盒子的编号进行匹配
+         * 4. 匹配成功后: 根据对应的奖品等级将奖品放到惊喜盒子的右上角的框框里(使用switch)
+         * 5. 一等奖: 兰博基尼
+         *    二等奖: 比亚迪
+         *    三等奖: iPhoneX
+         *    四等奖: 手机壳
+         */
+        var sel = document.querySelector('#sel');
+        var nums = document.querySelectorAll('.num'); //存放惊喜盒子编号的div
+        var awords = document.querySelectorAll('.aword'); //用于设置奖品内容的div
+        sel.onchange = function () {
+            //  补全代码
+
+            var selValue = sel.value;
+            var cont = "";
+            switch (selValue) {
+                case "一等奖":
+                    cont = "兰博基尼"
+                    break
+                case "二等奖":
+                    cont = "比亚迪"
+                    break
+
+                case "三等奖":
+                    cont = "iPhoneX"
+                    break
+
+                case "四等奖":
+                    cont = "手机壳"
+                    break
+
+                default:
+                    cont = "谢谢惠顾"
+            }
+            var num = prompt("请输入编号")
+            for (var i = 0; i < nums.length; i++) {
+                if (num == nums[i].innerHTML) {
+                    awords[i].innerHTML = cont
+                }
+
+            }
+            // console.log(cont)
+        }
+    </script>
+</body>
+
+</html>

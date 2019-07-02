@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+.wrap {
+    width: 800px;
+    margin: auto;
+    border: 1px solid black;
+    background: skyblue;
+    height: 750px;
+}
+
+.top {
+    line-height: 45px;
+    font-size: 26px;
+    color: white;
+
+}
+
+/* 
+ul li {
+    
+} */
+
+.bottom {
+    width: 100%;
+}
+
+.left {
+    float: left;
+    width: 700px;
+}
+
+.right {
+    float: left;
+    width: 100px;
+}
+
+.left ul li {
+    float: left;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    box-sizing: border-box;
+}
+
+.right ul li {
+    float: left;
+    width: 100px;
+    height: 58px;
+    text-align: center;
+    line-height: 58px;
+    color: #ccc;
+}
+
+#light {
+    color: white;
+    border: 1px solid blue;
+}
+
+.qq {
+    color: red
+}

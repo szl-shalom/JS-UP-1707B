@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    ul {
+        width: 500px;
+        margin: auto
+    }
+
+    li {
+        width: 100%;
+        list-style: none;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <ul id="ul">
+
+
+    </ul>
+
+
+    <script>
+        var arr = ["JS上", "1707B", "雄关漫道", "谁与争锋", "烈火雄炉", "我自称雄"]  // 原始数据
+        var ul = document.getElementById("ul")
+        arr.forEach(function (item, index) {
+            // item 数据项
+            // index 下标
+            if (index == 0) {
+                ul.innerHTML += `
+                <li>
+                        <span>我是第${index}项</span>
+                        <span>我学习的${item}</span>
+                </li>
+                `
+            } else if (index == 1) {
+                ul.innerHTML += `
+                <li>
+                        <span>我是第${index}项</span>
+                        <span>我的班级是的${item}</span>
+                </li>
+                `
+            } else {
+                ul.innerHTML += `
+                <li>
+                        <span>我是第${index}项</span>
+                        <span>我们的口号是${item}</span>
+                </li>
+                `
+            }
+
+        })
+    </script>
+</body>
+
+</html>

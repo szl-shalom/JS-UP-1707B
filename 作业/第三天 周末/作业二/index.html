@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1 通过js动态添加标签div  id名称为myID
+        var html1 = "<div id=myID></div>"
+        document.body.innerHTML += html1
+        // 2 在id名称为myID元素下面 添加ul标签 类名为myClass
+        var myID = document.getElementById("myID")
+        var html2 = "<ul class=myClass></ul>"
+        myID.innerHTML = html2
+        // 3 在类名为myclass元素下面 添加5个li标签
+        var ul = document.getElementsByTagName("ul")[0]
+        var html3 = `<li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>`
+        ul.innerHTML = html3
+        // 4 获取ul下面的所有li标签  给每一个li标签里面加入内容 我是第几个li标签
+        var lis = ul.getElementsByTagName("li")
+        lis[0].innerHTML = "我是第1个li标签"
+        lis[1].innerHTML = "我是第2个li标签"
+        lis[2].innerHTML = "我是第3个li标签"
+        lis[3].innerHTML = "我是第4个li标签"
+        lis[4].innerHTML = "我是第5个li标签"
+        console.log(lis)
+        // 5 将最后一个li的背景颜色设置为红色  将倒数第二个li的字体大小设置为32px
+        lis[lis.length - 1].style.background = "red"
+        lis[lis.length - 2].style.fontSize = "32px"
+    </script>
+</body>
+
+</html>

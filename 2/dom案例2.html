@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第二单元日考测试</title>
+    <style>
+        .active li:hover {
+            background: #ccc !important;
+        }
+    </style>
+</head>
+
+<body>
+    <li>123</li>
+    <ul id="el">
+        
+    </ul>
+    <script>
+        //1.声明一个变量el     存储   通过id名el获取的元素
+        var el = document.getElementById("el")
+        //2.  设置el这个元素的html内容为    <li>这是第一个列表</li><li>这是第二个列表</li>
+        el.innerHTML = "<li>这是第一个列表</li> <li>这是第二个列表</li>"
+        //3.获取el下的所有li元素
+        var li = el.getElementsByTagName("li")
+        console.log(li)
+        //4.设置第1个li的背景色为红色
+        li[0].style.background = "red"
+        //5.设置第2个li的字体颜色为蓝色
+        li[1].style.color = "blue"
+        //6.为el元素添加“active”这个样式class样式，实现鼠标滑过li改变背景色，样式素材已提供
+        el.className = "active"
+    </script>
+</body>
+
+</html>

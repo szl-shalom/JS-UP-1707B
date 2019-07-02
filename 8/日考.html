@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // （1）弹出一个输入框要求输入第一个数字，将用户输入的数存入变量（10分）
+        var num1 = +prompt("输入第一个数字")
+        // （2）弹出第二个输入框要求运算符，如 + - * / 等，将运算符存入变量（10分）
+        var sp = prompt("输入框要求运算符")
+        // （3）弹出第三个输入框要求输入第二个数字，将用户输入的数存入变量（10分）
+        var num2 = +prompt("输入第二个数字")
+        // （4）根据以上的数与运算符，计算后将运算结果显示到弹框中，如“10 + 10 = 20”
+        switch (sp) {
+            case "+":
+                alert(`${num1} ${sp} ${num2} = ${num1 + num2}`)
+
+        }
+
+
+    </script>
+</body>
+
+</html>

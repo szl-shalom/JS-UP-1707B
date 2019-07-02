@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        border-left-color: cornflowerblue;
+        border-right-color: aliceblue;
+        width: 100px;
+        height: 100px;
+    }
+</style>
+
+<body style="background: white">
+    <div></div>
+    <!-- <button id="div">
+        点我
+    </button> -->
+    <script>
+        var div = document.getElementById("div")
+        div.onclick = function () {
+            var back = document.body.style.background
+            if (back == "white") {
+                document.body.style.background = "red"
+            } else {
+                document.body.style.background = "white"
+            }
+        }
+    </script>
+    <!-- // switch 条件分支语句
+    // 条件表达式的结果 === 条件进行比较 执行代码体
+    // break //执行代码体有 break 出现的时候 switch 语句结束
+    // default //前面不匹配的情况下 默认执行的代码体
+    // switch (1) {
+    // case 条件:
+    // 执行代码体1
+    // case 1:
+    // 执行代码体2
+    // case 条件:
+    // 执行代码体3
+    // case 条件:
+    // 执行代码体4
+    // }
+    // var day = prompt("请输入星期")
+    // switch (day) {
+    // case "1":
+    // alert("星期一")
+    // break
+    // case "2":
+    // alert("星期二")
+    // break
+    // case "3":
+    // alert("星期三")
+    // break
+    // case "4":
+    // alert("星期四")
+    // break
+    // case "5":
+    // alert("星期五")
+    // break
+    // case "6":
+    // alert("星期六")
+    // break
+    // case "7":
+    // alert("星期天")
+    // break
+    // default :
+    // alert("用户输入不合法")
+    // }
+    // 1-12
+    // 1 3 5 7 8 10 12 =》31天
+    // 4 6 9 11 =》30天
+    // var month = prompt("请输入月份")
+    // switch (month) {
+    // case "1":
+    // case "3":
+    // case "5":
+    // case "7":
+    // case "8":
+    // case "10":
+    // case "12":
+    // alert(month + "月31天")
+    // break
+    // case "4":
+    // case "6":
+    // case "9":
+    // case "11":
+    // alert("30天")
+    // break
+    // }
+    // 2 平年 28 润年 29
+    // 第一种能够整除400
+    // 或者能整除4不能整除100 -->
+
+</body>
+
+</html>

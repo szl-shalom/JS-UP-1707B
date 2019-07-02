@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="myID">1</div>
+    <script>
+        // 1.通过ID名获取页面中的元素，并获取它的内容，
+        // 在控制台输出该内容的数据类型，并在代码中注释说明最终的结果（50分）
+        // 数据类型是字符串 string
+        var divValue = document.getElementById("myID").innerHTML
+        console.log(typeof divValue)
+        // 2.请问什么时候需要给null类型的数据
+        // （将题干用单行注释放到JS脚本中，答案以多行注释来书写）？（25分）
+
+        /*
+            一般用于声明空对象
+        */
+
+        // 3.请问null与undefined有什么区别
+        // （将题干用单行注释放到JS脚本中，答案以多行注释来书写）？（25分）
+
+        /*
+           相同点
+           都是基本数据类型，都是一个值，
+           JS内部规定 undefined == null  => true
+           不同点
+           undefined 一般用声明时没有赋值 默认值为undefined
+           null   一般用于声明空对象
+       */
+
+
+    </script>
+</body>
+
+</html>

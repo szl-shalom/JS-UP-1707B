@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 作业1 
+        // 二维数组求和   要求封装函数  函数有一个参数arr  函数返回二位数组里面所有的数字的和
+        // function fn(arr) {
+        //     var sum = 0
+        //     for (var i = 0; i < arr.length; i++) {
+        //         for (var j = 0; j < arr[i].length; j++) {
+        //             sum += arr[i][j]
+        //         }
+        //     }
+
+        //     return sum
+        // }
+        // console.log(fn([[1, 2, 3], [4, 5, 6, 7]]))
+
+
+        // 作业2 
+        // 封装一个函数push  功能是在数组的最后推入数据  最少两个参数参数 一个是数组 另一个是传入的数组    返回推入后的数组
+        // Push(   [1,2]  ,5,7,9   )
+
+        // function fn() {
+
+        //     var arr = arguments[0];
+        //     for (var i = 1; i < arguments.length; i++) {
+        //         arr[arr.length] = arguments[i]
+        //     }
+        //     return arr
+        // }
+
+        // console.log(fn([1, 2, 3], 8, 3, 9, [9, 6, 8]))
+
+
+
+        // [1,2,4,7,9]
+
+        // 作业3
+        // 封装函数  功能是将一维数组转化为二位数组  函数有两个参数 一个是arr 表示传入的一维数组  第二个参数为二维数组每一位元素的长度   返回新的二维数组
+
+        // function fn(arr, len) {
+        //     var arr1 = []
+        //     for (var i = 0; i < arr.length; i += len) {
+        //         arr1.push(arr.slice(i, i + len))
+        //     }
+        //     return arr1
+        // }
+
+        // console.log(fn([1, 2, 3, 4, 5, 6, 7, 8, 9], 4))
+
+
+
+        // 作业 4 
+        // 封装函数fn4  函数有一个参数arr  返回数组从小到大排序结果  返回排序后的数组 
+        // 传入 [3,1,6,8,9,5,3]  返回 [1,3,3,5,6,7,8]
+
+        // function fn(arr) {
+        //     for (var i = 0; i < arr.length; i++) {
+        //         for (var j = 0; j < arr.length - i; j++) {
+        //             if (arr[j] > arr[j + 1]) {
+        //                 var flag = arr[j]
+        //                 arr[j] = arr[j + 1]
+        //                 arr[j + 1] = flag
+        //             }
+
+        //         }
+        //     }
+        //     return arr
+        // }
+
+        // console.log(fn([3, 6, 8, 9, 3, 2, 6, 9, 0, 88882, 9, 4, 364, 68, 13, 54]))
+
+
+    </script>
+</body>
+
+</html>

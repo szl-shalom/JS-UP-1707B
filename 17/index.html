@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tab切换</title>
+    <style>
+        ul li {
+            list-style: none;
+        }
+
+        #top {
+            height: 35px;
+        }
+
+        #top ul li {
+            width: 100px;
+            text-align: center;
+            float: left;
+        }
+
+        #bottom ul li {
+            display: none
+        }
+
+        #bottom ul li:first-child {
+            display: block
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="top">
+        <ul>
+            <li style="background: red">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+    <div id="bottom">
+        <ul>
+            <li>
+                我是1
+            </li>
+            <li>
+                我是2
+            </li>
+            <li>
+                我是3
+            </li>
+
+            <li>
+                我是4
+            </li>
+            <li>
+                我是5
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // [...类数组]
+        // Array.from(类数组)
+        // Array.prototype.slice.call(类数组)
+
+        var topLIS = [...document.getElementById("top").getElementsByTagName("li")]
+        var bottomLis = [...document.getElementById("bottom").getElementsByTagName("li")]
+        console.log(topLIS)
+        console.log(bottomLis)
+        topLIS.forEach(function (item, index) {
+            item.onclick = function () {
+                console.log(index)
+                // 把上面的背景清空
+                topLIS.forEach(function (item) {
+                    item.style.background = ""
+                })
+                // 
+                bottomLis.forEach(function (item) {
+                    item.style.display = "none"
+                })
+
+                item.style.background = "red"
+                bottomLis[index].style.display = "block"
+            }
+        })
+
+            (2017, 5, 1)
+            ("2017-5-1")
+            ("2017/5/1")
+            ("2017,5,1")
+    </script>
+</body>
+
+</html>

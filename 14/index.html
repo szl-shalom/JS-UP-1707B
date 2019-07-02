@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Math  
+        // 向下取整
+        // Math.floor(参数)
+        // var a = -1.2
+        // console.log(Math.floor(a))
+        // 向上取整
+        //  Math.ceil()
+        // var a = -1.2
+        // console.log(Math.ceil(a))
+        // 四舍五入
+
+        // console.log(Math.round(2.5))
+        // 取最大的一个数字
+        // console.log(Math.max(-1, -2, -3, -4))
+        // 取最小的一个数字
+        // console.log(Math.min(1, 2, 4))
+        // 产生一个[0-1)  之间的随机数
+        // console.log(Math.random())
+
+        // 随机产生0-10之间的一个整数 包括0  不包括10
+        // 0 1 2 3 4 5 6 7 8 9
+        // 随机产生一个 5 - 12之间的整数 包括5 不包括12
+
+
+        // var arr = [false, true, 1, function () { }, {}, []]
+        // for (var i = 1; i < 50; i++) {
+        //     //     // console.log(Math.floor(Math.random() * 10))
+        //     //     console.log(Math.floor(Math.random() * (12 - 5) + 5))
+        //     var index = Math.floor(Math.random() * arr.length)
+
+        //     console.log(arr[index])
+
+        // }
+
+        // console.log(Math.pow(10, 3))
+
+        // Math.floor(Math.random() * (100 - 1 + 1) + 1)
+
+
+
+
+        // 取[n-m)  的数字
+        // Math.floor(Math.random() * (m - n) + n)
+        // 取[n,m]
+        // Math.floor(Math.random() * (m - n + 1) + n)
+
+        // 计算元素在数组中出现了几次
+        // 封装reverse()方法 
+        // 封装push
+        // 数组去重
+
+        // 
+
+
+        // 
+        // 数组转字符串
+        // Array.join(sp)
+
+        // var arr = ["border", "left", "color"]
+        // "broderleftcolor"
+
+        // // "1,2,3,4,5"
+        // var str = arr.join("123123123")
+        // "1-2-3-4-5"
+
+        // console.log(str)
+
+        // var arr = [1, 2, 3, 4]
+        // var arr1 = arr.reverse()
+        // console.log(arr)
+        // console.log(arr1)
+
+        // 
+        var arr = [5, 6, 9, 8, 7]
+        // "7-8-9-6-5"
+
+        // console.log(arr.reverse().join("-"))
+        // //
+
+
+        // var arr = [3, 2, 12, 13, 55, 42]
+        // // [2, 3, 12, 13, 42, 55]
+        // arr.sort(function (cc, dd) {
+        //     return dd - cc
+        // })
+
+
+        // console.log(arr)
+
+        var arr = [
+            {
+                name: "张三",
+                age: 18,
+            },
+            {
+                name: "六七",
+                age: 1,
+            },
+            {
+                name: "李四",
+                age: -123,
+            },
+            {
+                name: "王五",
+                age: -012,
+            },
+            {
+                name: "赵柳",
+                age: 882,
+            },
+            {
+                name: "六七",
+                age: 23,
+            },
+            {
+                name: "六七",
+                age: 23,
+            },
+        ]
+
+        arr.sort(function (a, b) {
+            return a.age - b.age
+        })
+        console.log(arr)
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

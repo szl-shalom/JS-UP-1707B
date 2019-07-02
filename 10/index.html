@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 什么是函数
+        // 函数是有事件驱动或者可重复执行的代码块
+        // 函数有什么作用
+        // 言之有理即可
+
+        // 函数定义  2中方式
+        // 方式一 函数声明  函数声明具有函数提升的效果
+        // function fn() {
+
+        // }
+        // // 方式二  函数表达式
+        // var fn = function () {
+
+        // }
+
+        // 函数参数
+        // 分为形参和实参
+        // 形参：是函数声明时定义的参数
+        // 实参：是函数调用时传入的参数
+        // 形参与实参一一对应
+
+
+        // 函数执行
+        // 函数名(实参1,实参2....)
+
+        // 函数返回值
+        // 函数默认返回值 undefined
+        // return 后面的代码不会执行
+
+        // 函数的arguments
+        // 是个类数组 对象  
+        // arguments.length 保留你传入的实参的个数
+        // arguments 和 实参列表 是一个映射关系
+        // arguments[下标] 取元素
+
+        // function fn(a) {
+        //     console.log(a)
+        //     console.log(arguments[0])
+        //     a = 2
+        //     console.log(a)
+        //     console.log(arguments[0])
+        // }
+        // fn(1)
+
+        // 封装一个函数  
+        // 如果传入一个数字  控制台打印这个数字
+        // 如果传入两个数字  控制台打印两个数字的乘积 
+        // 如果传入三个数字  控制台打印三个数字的和
+
+        function fn() {
+            if (arguments.length === 1) {
+                console.log(arguments[0])
+            } else if (arguments.length === 2) {
+                console.log(arguments[0] * arguments[1])
+            } else if (arguments.length === 3) {
+                console.log(arguments[0] + arguments[1] + arguments[2])
+            }
+        }
+        // fn(1)
+        // fn(1, 2)
+        // fn(1, 2, 3)
+
+
+        // 封装一个函数 fn
+        // 函数有两个形参 start,end
+        // 控制台打印start-end之间的所有的整数  包括start和end
+        // fn(1,10)   => 1 2 3 4 5 6 7 8 9 10
+        function fn(start, end) {
+            for (var i = start; i <= end; i++) {
+                console.log(i)
+            }
+        }
+
+        fn(1, 100)
+
+
+        // 封装一个函数 fn
+        // 函数有两个参数  start , end 
+        // 函数的功能 控制台打印 start - end 之间所有数字的和
+        // fn(1,10) => 55
+
+
+
+        // javascript高级程序设计  红皮书
+        // javascript权威指南      绿皮书  犀牛书
+
+        // 举个栗子
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

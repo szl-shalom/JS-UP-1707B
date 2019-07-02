@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第五单元日考测试</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <a href="#" style="font-size:30px">今日头条</a>
+    <p>这个金苹果的价格是：<span>98.99元</span></p>
+    <script>
+        // （1）从页面元素中获取“98.99元”，并得到“98.99”这个数字并在弹框中显示。（50分）
+        var span = document.getElementsByTagName("span")[0]
+        var spanValue = span.innerHTML
+        alert(parseFloat(spanValue))
+        // （2）获取A标签的字体大小如素材给定的30px，并得到30这个数字在控制台打印输出。（50分）
+        var a = document.getElementsByTagName("a")[0]
+        var fontSize = a.style.fontSize
+        console.log(parseInt(fontSize))
+
+    </script>
+</body>
+
+</html>

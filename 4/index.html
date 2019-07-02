@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>123</button>
+    <script>
+        // 算数运算符
+        // + - * / % ++ --
+        // 加号运算符 + 
+        // 如果有一端是字符串类型 那么拼接
+        // 其他情况转化数字 进行算数运算
+        // var num = false + 1
+        // var num1 = true + 1
+        // var num2 = null + 1
+        // var num3 = undefined + 1
+        // var num4 = false + true
+        // console.log(num4)
+
+        // console.log(num5)
+
+        // - * /  %  
+        // 直接将两端转化为数字 进行算数运算
+        // var a1 = "123" - NaN
+        // var a2 = undefined - undefined
+        // console.log(a1)
+        //  ++ --
+        //  ++运算符  
+
+        // var a = 1
+        // a++  第一步先赋值  再进行自加
+        // var b = a++
+        // console.log(b)
+        // console.log(a)
+
+
+        // var c = 5
+        // ++c  先自加  在赋值
+        // var d = ++c
+        // console.log(d)
+        // console.log(c)
+
+
+
+        // var a = 4; // a = 4
+        // var b = a-- // a = 3  b = 4
+        // var c = --a // a = 2  b = 4   c = 2
+        // console.log(a, b, c)
+        // 3 4 3
+        // 4 4 2
+        // 4 3 2 
+        // 4 4 3
+        // 3 4 2 
+        // 2 4 2
+        // 2 3 2 
+        // ++a  //先自加 后赋值
+        // a++  //先赋值 后自加
+        // 隐式类型转换
+        // --a  //先自减 后赋值
+        // a--  //先赋值 后自减
+        // 显示类型转换
+        // var a = +undefined
+        // console.log(a)
+
+
+        // var a, b, c, d, e;
+        // a = 3;  //a = 3
+        // b = 10; // b = 10
+        // c = (--a) + (b++);  //a = 2  b = 11  c= 12
+        // //    2   +  10
+        // d = (--b) - a;  // a = 2 b = 10  c = 12  d = 8
+        // //   10  -  2
+        // e = b / a + 3 - 2 % 4;  //e = 6
+        // //    10 / 2 + 3 - 2 % 4   
+        // //输出 c, d， e的结果值
+        // console.log(c);//12
+        // console.log(d);//8
+        // console.log(e);//6
+
+
+
+
+        // var res = +d + Boolean(Number(d)) * parseInt(a) + Boolean(String(e));
+
+
+
+        // var res = Boolean(parseInt(b)) - d - +'12' + parseInt(a).toString();
+        // res =  flase  - null  - 12 + "3"
+        // res =  -12 + "3"
+        // res = "-123"
+
+        // var a = 3.55;
+        // var b = true;
+        // var c = '1.01';
+        // var d = null;
+        // var e;
+        // var res = +Boolean(parseFloat(c)) - isNaN(d) + typeof (e);
+        // // res = 1 - false + "undefined"
+
+        // // res = "1undefined"
+        // console.log(res)
+        // 赋值运算符
+        // = += -= *= /= %=
+        // var a = 11;
+        // var b = 10;
+        // b %= a
+        // console.log(b)
+        // 比较运算符
+        // == === != !== > < >= <=
+
+
+        // == 
+        // 比较的数值 【会发生隐式类型转换】
+        // 【只适用于基本类型进行比较】
+        // undefined == undefined //true
+        // null == null // true
+        // NaN == NaN // false
+        // null == undefined //true
+        // null只等于自身和undefined
+        // undefined只等于自身和null
+        // NaN不等于一切
+        // 当两端都为字符串的时候,那么比较的是字符串中的每一个字符对应ASCLL码表上字符 对应十进制的数字
+        // 当两端不全为字符串 那么将两端隐式类型转化为数值进行比较
+
+        // ===
+        // 比较的是数值和数据类型 【不会发生隐式类型转化】
+        // 【只适用于基本数据类型】
+        // 两端就是一个值 看起来一样  除了NaN
+
+        // !=
+        var flag = undefined >= undefined
+        console.log(flag)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第二单元日考测试</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <ul id="list">
+        <li class="one">列表项内容</li>
+        <li id="item2">列表项内容</li>
+        <li>列表项内容</li>
+        <li>列表项内容</li>
+        <li>列表项内容</li>
+        <li>列表项内容</li>
+    </ul>
+
+    <div id="myID">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span style="background: red"></span>
+    </div>
+    <script>
+        // 功能1
+        // 1．获取id名为demo的元素，并在控制台打印输出（20分）
+        var demo = document.getElementById("demo")
+        console.log(demo)
+        // 2．获取UL下的所有LI元素，并在控制台打印输出LI的总个数（20分）
+        var ul = document.getElementById("list")
+        var lis = ul.getElementsByTagName("li")
+        // console.log(lis.length)
+        // 3．获取第2个LI的id名，弹框方式输出（20分）
+        // alert(lis[1].id)
+        // 4．获取第1个LI的class名，弹框方式输出（20分）
+        // alert(lis[0].className)
+        // 5．设置第3个LI的class名为item3（20分）
+        lis[2].className = "item3"
+
+        // 功能2
+        // 获取id名称为myID的元素 并获取所有span标签
+        var myID = document.getElementById("myID")
+        var spans = document.getElementsByTagName("span")
+        console.log(myID)
+        console.log(spans)
+        // 获取最后一个最后一个span标签  取出行内背景颜色赋值给变量back
+        var back = spans[spans.length - 1].style.background
+        //  获取倒数第二个span标签  并将内容改为  周考1技能理论我都会及格
+        spans[spans.length - 2].innerHTML = "周考1技能理论我都会及格"
+        //  给id名称为 myID的元素  添加类名myclass1和myclass2
+        myID.className = "myclass1"
+        myID.className += " myclass2"
+    </script>
+</body>
+
+</html>

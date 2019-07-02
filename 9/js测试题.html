@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 第1题
+        // 请有效的说出 == 与 === 的区别
+
+        // ==相等   比较的是数值
+
+        // 类型    类型
+        // 布尔    字符串   =>都转数字
+        // 数字    布尔     =>布尔转数字
+        // 数字    字符串   =>字符串转数字
+
+        // 对象    字符串  
+        // 对象    数字
+        // 对象    布尔
+        // 对象默认调用toString()方法进行比较
+
+        // 对象   对象
+        // 比较是内存地址
+
+
+        // ===全等  比较的是数值和数据类型
+
+
+
+
+        // # 2. 第2题
+        for (var i = 0; i < 10; i++) {
+            //补全代码
+            if (i != 0 && i != 5 && i != 8 && i != 9) {
+                alert(i)
+            }
+        }
+        // 0 1 2 3 4 5 6 7 8 9
+        // 最终输出的结果为1， 2， 3， 4， 6， 7
+        // 0 5  8 9 
+
+
+
+        var i = 0;
+        while (i < 10) {
+            //补全代码
+            if (i != 0 && i != 5 && i != 8 && i != 9)
+                alert(i)
+            i++
+        }
+
+        // 0 1 2 3 4 5 6 7 8 9
+        // 最终输出的结果为1， 2， 3， 4， 6， 7
+                            // 0 5  8 9 
+
+
+    </script>
+</body>
+
+</html>

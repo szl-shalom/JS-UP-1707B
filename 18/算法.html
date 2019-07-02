@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //1.传递任意字符串,将该字符串翻转并返回
+
+
+        // function fn(str) {
+        //     // 方式一
+        //     // var s = ""
+        //     // for (var i = str.length - 1; i >= 0; i--) {
+        //     //     s += str[i]
+        //     // }
+        //     // return s
+
+        //     // 方式二
+        //     // return str.split("").reverse().join("")
+        // }
+
+        // console.log(fn("123456"))
+        //6.封装函数fn(str,num) 默认字符串重复3遍
+        // function fn(str, num) {
+        //     num = num || 3
+        //     var s = ""
+        //     for (var i = 1; i <= num; i++) {
+        //         s += str
+        //     }
+        //     return s
+        // }
+        // console.log(fn("123", 10))
+
+        //8.封装获取n--m之间的随机整数
+
+        // function fn(n, m) {
+        //     return Math.floor(Math.random() * (m - n + 1) + n)
+        // }
+
+        // console.log(fn(1, 100))
+
+        //7.求数组中最大值和最小值
+
+        // function fn(arr) {
+        //     var s = arr.slice()
+        //     s.sort(function (a, b) {
+        //         return a - b
+        //     })
+        //     return {
+        //         max: s[s.length - 1],
+        //         min: s[0]
+        //     }
+        // }
+        // console.log(fn([4, 6, 8, 2, 3, 6]))
+        //9.转驼峰
+
+        // var str = 'get-elements-by-tag-name'; //getElementsByTagName
+
+        // function fn(str) {
+        //     var s = ""
+        //     var arr = str.split("-")
+        //     for (var i = 0; i < arr.length; i++) {
+        //         if (i === 0) {
+        //             s += arr[i]
+        //         } else {
+        //             s += arr[i][0].toUpperCase() + arr[i].slice(1)
+        //         }
+        //     }
+        //     return s
+        // }
+        // console.log(fn('get-elements-by-tag-name'))
+
+
+        // 10,随机产生10个值1-100 放到新数组当中 切元素不能重复  返回新数组
+        // function fn1(n, m) {
+        //     return Math.floor(Math.random() * (m - n + 1) + n)
+        // }
+
+        // function fn(n, m) {
+        //     var arr = []
+        //     var sum = 0
+        //     for (var i = 0; ; i++) {
+        //         var ran = fn1(n, m)
+        //         if (arr.indexOf(ran) === -1) {
+        //             arr.push(ran)
+        //             sum++
+        //         }
+        //         if (sum === 10) {
+        //             break
+        //         }
+        //     }
+
+        //     return arr
+        // }
+
+        // console.log(fn(1, 100))
+
+        //14.封装toFixed方法
+
+
+        // toFixex("123", 2)  => "123.00"
+
+
+        // toFixex("123.12364", 2)  => "123.12"
+        // toFixex("123.1", 3)  => "123.100"
+
+        // function toFiexed(num, len) {
+        //     // 转化成字符串
+        //     num = String(num)
+        //     // 小数点下标
+        //     var index = num.indexOf(".")
+        //     // 是不是保留0为小数
+        //     if (len === 0) {
+        //         if (index === -1) {
+        //             return num
+        //         } else {
+        //             return num.slice(0, index)
+        //         }
+        //     }
+        //     // 有没有用小数点
+        //     if (index === -1) {
+        //         // 没有小数点
+        //         var s = ""
+        //         // 拼接0
+        //         for (var i = 1; i <= len; i++) {
+        //             s += "0"
+        //         }
+        //         return num + "." + s
+        //     } else {
+        //         // 有小数点
+        //         // 取小数点后面的长度
+        //         var floatLen = num.slice(index + 1).length
+        //         if (floatLen > len) {
+        //             // 进行截取
+        //             //小数点后面的位数
+        //             // console.log(num.slice(index + 1).slice(0, len))
+        //             // 小数点前面的位数
+        //             return num.slice(0, index) + "." + num.slice(index + 1).slice(0, len)
+        //         } else {
+        //             // 补0
+        //             var s = ""
+        //             for (var i = 1; i <= len - floatLen; i++) {
+        //                 s += "0"
+        //             }
+        //             return num + s
+        //         }
+        //     }
+        // }
+
+
+        // console.log(toFiexed(123.22, 2))
+
+        //16.封装函数 check 检查一个字符串(str)是否以指定的字符串(target)结尾
+
+        // check("qwe123","123") =>true
+        // check("werersd","dd") =>false
+
+        // function check(str1, str2) {
+        //     // 方式一
+        //     // var len = str2.length
+        //     // return str1.slice(str1.length - len) === str2
+
+        //     // 方式二
+        //     // for (var i = str1.length - 1; i >= str1.length - str2.length; i--) {
+        //     //     if (str1[i] !== str2[i - str2.length]) {
+        //     //         {
+        //     //             return false
+        //     //         }
+
+        //     //     }
+        //     // }
+
+        //     // return true
+
+        // }
+
+
+        // console.log(check("qwe123", "123"))
+
+
+        //19.封装函数 findLongWord   找出最长单词在句子中找出最长的单词，并返回它的长度。函数的返回值应该是一个数字。
+
+        // findLongWord("I hava a apple")  =>5
+
+        // findLongWord("1aeq haqweva aqwe apqweple qweqw")  =>8
+
+        // function findLongWord(str) {
+        //     var s = 0
+        //     str.split(" ").forEach(function (item) {
+        //         if (s < item.length) {
+        //             s = item.length
+        //         }
+        //     })
+        //     return s
+        // }
+        // console.log(findLongWord("1aeq haqweva aqwe apqweple qweqw"))
+
+
+        //23.getNum()   查找字符串中出现次数最多的字符和次数
+
+        // getNum("qweqweqq")  => ["q", 4]
+
+        // getNum("tktkelttt")  => ["t", 5]
+
+
+        // function getNum(str) {
+        // 方式一
+        // var num = 1;
+        // var char = str[0]
+        // for (var i = 0; i < str.length; i++) {
+        //     var s = 0
+        //     for (var j = 0; j < str.length; j++) {
+        //         if (str[i] === str[j]) {
+        //             s++
+        //         }
+        //     }
+        //     if (num < s) {
+        //         num = s
+        //         char = str[i]
+        //     }
+        // }
+        // return [char, num]
+
+        // var num = 1;
+        // var char = str[0]
+        // 方式二
+
+        // for (var i = 0; i < str.length; i++) {
+        //     if (num < str.split(str[i]).length - 1) {
+        //         num = str.split(str[i]).length - 1
+        //         char = str[i]
+        //     }
+        // }
+        // return [char, num]
+
+
+
+        // }
+        // console.log(getNum("tktkelttt"))
+        //26.封装一个函数equal(a1,a2),传入两个一维数组，判断两个数组是否包含相同的元素，如果相等，函数的返回值为true，不相等，函数的返回值为false
+
+        //1）例：arr1 = ['a', 'b' ，"c] arr2 =["c",,'b', 'a'],equal(arr1,arr2)的返回值为true
+
+        //2）例：arr3 = [2,3] arr4=[3,4],equal(arr3,arr4)的返回值为false
+
+        // console.log(parseInt("   0001"))
+        // console.log(parseFloat("   000"))
+
+        function equal(arr1, arr2) {
+            return arr1.sort().join("") === arr2.sort().join("")
+        }
+        console.log(equal(['a1', 'b', "c"], ["c", 'b', 'a']))
+
+    </script>
+</body>
+
+</html>

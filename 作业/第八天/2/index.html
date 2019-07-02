@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">点我开启</button>
+    <button id="btn1">点我关闭</button>
+    <div id="box">
+
+    </div>
+    <script>
+        //补全代码实现对应功能
+
+        //点击按开启在box中到中动态生成20个li li的内容为它的下标
+        //所有的li中 下标为0 4 8 12 16 红色
+        //          下标为1 5 9 13 17 绿色
+        //          下标为2 6 10 14 18 粉色
+        //          下标为3 7 11 15 19 蓝色
+        //点击 关闭按钮清空所有的李li
+
+        var box = document.getElementById("box")
+
+        btn.onclick = function () {
+            //补全代码
+            box.innerHTML = ""
+            for (var i = 0; i < 20; i++) {
+                box.innerHTML += `<li>${i}</li>`
+            }
+            var lis = document.getElementsByTagName("li")
+            console.log(lis)
+
+
+            for (var i = 0; i < lis.length; i++) {
+                console.log(lis[i])
+
+                switch (i % 4) {
+                    case 0:
+                        lis[i].style.background = "red"
+                        break
+                    case 1:
+                        lis[i].style.background = "green"
+                        break
+                    case 2:
+                        lis[i].style.background = "pink"
+                        break
+                    case 3:
+                        lis[i].style.background = "blue"
+                        break
+                }
+
+
+            }
+            // switch ()
+            //所有的li中 下标为0 4 8 12 16 红色
+            //          下标为1 5 9 13 17 绿色
+            //          下标为2 6 10 14 18 粉色
+            //          下标为3 7 11 15 19 蓝色
+
+
+        }
+        btn1.onclick = function () {
+            //补全代码清空盒子
+            box.innerHTML = ""
+        }
+    </script>
+</body>
+
+</html>

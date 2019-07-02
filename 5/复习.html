@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 算符运算符
+        // + - * / % ++ --
+        // var a = 1
+        // var b = a + 1
+        // a++   //先取值 后自加
+        // ++a   //先自加 后取值
+
+        // a--   //先取值 后自减
+        // --a   //先自减 后取值
+
+        // 赋值运算符
+        // = += -= *= /= %=
+        // 比较运算符  返回值 一定是一个布尔值 true 或者 false
+        // == === != !==  > < >= <=  
+        // null  null只等于自身和undefined
+        // undefined  undefined只等于自身和null
+        // NaN 不等于一切
+        // 【只适用于基本数据类型】
+        // 如果两端都是字符串 那么比较的是字符串的每一个字符对应ASCLL码表十进制的数字  一一对应进行比较
+        // 如果不全为字符  那么将转化数字(隐式类型转化) 进行数值比较
+
+        // 逻辑运算符
+        // &&  逻辑与
+        //  表达式1  &&  表达式2
+        // 如果表达式1的结果 转布尔值为真（隐式类型转化）  那么返回表达式2的结果
+        // 如果表达式1的结果 转布尔值为假（隐式类型转化）  那么返回表达式1的结果  (表达式2未运行)
+        // var a = console.log("123")
+        // console.log(a)
+
+        // ||  逻辑或
+        // 如果表达式1的结果 转布尔值为真（隐式类型转化）  那么返回表达式1的结果  (表达式2未运行)
+        // 如果表达式1的结果 转布尔值为假（隐式类型转化）  那么返回表达式2的结果  
+        // ！  逻辑非
+        // 将表达式的结果 转化为布尔值再取反  
+        // var a = (1, 2, 3, 4)
+        // console.log(a)
+
+        // ()
+        // ++ --
+        // * / %
+        // + - 
+        // > < >= <=
+        // == === != !==
+        // !
+        // &&
+        // ||
+        // =
+        // alert((1 && 3 || 0) && 4)  
+        // alert(1 && 3 || 0 && 4)    
+        // alert(0 && 3 || 1 && 4)  
+
+        // 逻辑与
+        // 当表达式1的结果  转布尔值为真（隐式类型转换）   返回表达式2的结果
+        // 当表达式1的结果  转布尔值为假（隐式类型转换）   返回表达式1的结果
+        // console.log(true && 10);    //10
+        // console.log(100 && false);  // false
+        // console.log(undefined && false);  //undefined
+        // console.log(NaN && false);  // NaN
+        // console.log(null && false);  //null
+        // console.log('' && false);  // ""
+        // console.log(0 && 100);  // 0
+        // 逻辑或
+        // 当表达的是1的结果  转布尔值为真（隐式类型转换）  返回表达式1的结果
+        // 当表达的是1的结果  转布尔值为假（隐式类型转换）  返回表达式2的结果
+
+        // console.log(true || 10);  //true
+        // console.log(100 || false);  //100
+        // console.log(undefined || 9);  // 9
+        // console.log(NaN || false);  // false
+        // console.log('' || false); //false
+        // console.log(0 || 100); //100
+    </script>
+</body>
+
+</html>

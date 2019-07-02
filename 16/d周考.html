@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        封装一个myFormatTime函数，如果传入时间就格式化传入的时间（传入的时间，通过 时间对象（Date） 生成的），
+        如果没有传入时间就格式化当前时间，输出的格式为   2000 - 01 - 02  。
+
+        例1   var time2 = myFormatTime(new Date()); console.log(time2);   //打印结果为    2019-05-21
+        例2  var time2 = myFormatTime(); console.log(time2);   //打印结果为    2019-05-21
+
+
+
+
+
+
+
+
+
+
+
+
+        // // 2、通过函数表达式声明myFormatTime函数(8分)
+        // var myFormatTime = function (time) {
+        //     // 6、正确在myFormatTime中使用判断8分）
+        //     time = time || new Date()
+        //     // 3、正确使用时间对象的方法（8分）
+        //     var year = time.getFullYear()
+        //     var month = time.getMonth()
+        //     var date = time.getDate()
+        //     // 4、正确给myFormatTime设置返回值（8分）
+        //     return `${year}-${month + 1}-${date}`
+        // }
+        // // 5、正确调用myFormatTime并打印输出结果（8分）
+        // console.log(myFormatTime(new Date(2019, 6, 9)))
+
+
+        2.功能二：
+        ，实现两个数组的合并, 并可以实现两个例题的打印
+        ，不封装一个mergeArray方法许使用数组的内置方法
+        1）例：var newArr = meargeArray([1, 2, 3, 4], [“a”, ”b”]); console.log(newArr); 
+        打印结果为 [1,2,3,4,”a”,”b”]
+        2）例：var newArr2 = meargeArray([1, 2, 3], [[4, 5, 6], function () { }]); console.log(newArr2); 
+        打印结果为    [1,2,3,[4,5,6],function(){}]
+
+
+
+        // 7、正确定义mergeArray函数（8分）
+        // function mergeArray(arr1, arr2) {
+        //     var arr = []
+        //     // 8、正确在mergeArray中使用循环（8分）
+        //     for (var i = 0; i < arr1.length; i++) {
+        //         arr[arr.length] = arr1[i]
+        //     }
+
+        //     for (var i = 0; i < arr2.length; i++) {
+        //         arr[arr.length] = arr2[i]
+        //     }
+
+
+        //     // 9、正确返回数组（8分）
+        //     return arr;
+        // }
+        // // 10、正确打印出合并的数组（8分）
+        // console.log(mergeArray([1, 2, 3, 4], ['a', 'b']))
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1．封装一个numberSort(nList)函数，实现如下功能：nList是个数字串，例如1,4,5,23,2,17,24,897。请把这串数字转为数组后按照中间高两边低进行排序，最后的结果是["1", " 4", " 5", "
+    23", " 897", " 24", " 17", " 2"]，请注意左右翼数据数据的平衡性（左右两边的数个数一致）。
+    console.log(numberSort('1, 4, 5, 23, 2, 17, 24, 897'));
+    //打印结果是["1", " 4", " 5", " 23", " 897", " 24", " 17", " 2"]
+    console.log(umberSort('12, 4, 0,65,30,8,19'));
+    // 打印结果是[" 0", " 4", "12", "65", "30", "19", "8"] -->
+
+    <script>
+        // function numberSort(str) {
+        //     // 字符串转数组
+        //     var arr = str.split(",")
+        //     // 判断数组的长度是奇数还是偶数
+        //     if (arr.length % 2 == 0) {
+        //         // 说明是偶数
+
+        //         // 取中间的下标
+        //         var index = arr.length / 2
+        //         // 前面的数组
+        //         var a = arr.slice(0, index)
+        //         // 前面数组排序  升序
+        //         a.sort(function (a, b) {
+        //             return a - b
+        //         })
+        //         // 后面的数组
+        //         var b = arr.slice(index)
+
+        //         b.sort(function (a, b) {
+        //             return b - a
+        //         })
+
+        //         // 拼接
+        //         return a.concat(b)
+        //     } else {
+
+        //     }
+        // }
+        // console.log(numberSort('1, 4, 5, 23, 2, 17, 24, 897'))
+
+        function formatNum(num) {
+            var len = String(num).length
+            var a = "";
+
+            function fn(val, flag) {
+                if (flag) {
+                    // 一位数
+                    switch (val) {
+                        case 1:
+                            a += "一"
+                            break
+                        case 2:
+                            a += "二"
+                            break
+                        case 3:
+                            a += "三"
+                            break
+                        case 4:
+                            a += "四"
+                            break
+                        case 5:
+                            a += "五"
+                    }
+                } else {
+                    // 两位数
+                    switch (val) {
+                        case 1:
+                            a += "一十"
+                            break
+                        case 2:
+                            a += "二十"
+                            break
+                        case 3:
+                            a += "三十"
+                            break
+                        case 4:
+                            a += "四十"
+                            break
+                        case 5:
+                            a += "五十"
+                    }
+                }
+
+            }
+
+
+            if (len == 1) {
+                fn(num, true)
+                return a
+            } else {
+                // 两位数
+                var num1 = num % 10
+                var num2 = Math.floor(num / 10)
+               
+                fn(num2, false)
+                fn(num1, true)
+                console.log(a)
+                return a
+            }
+
+
+
+
+            // return formatNum(num)
+        }
+
+        console.log(formatNum(52))
+
+    </script>
+</body>
+
+</html>

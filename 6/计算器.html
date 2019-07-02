@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="num1">
+    <select name="" id="sp">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" id="num2">
+    <button id="submit">=</button>
+    <span id="result">结果</span>
+    <script>
+        var submit = document.getElementById("submit")
+        var result = document.getElementById("result")
+        submit.onclick = function () {
+            var num1 = document.getElementById("num1").value
+            var num2 = document.getElementById("num2").value
+            var sp = document.getElementById("sp").value
+            console.log(num1, num2)
+            switch (sp) {
+
+                case "+":
+                    result.innerHTML = ((+num1) + (+num2))
+                    break
+                case "-":
+                    result.innerHTML = +num1 - +num2
+                    break
+                case "*":
+                    result.innerHTML = +num1 * +num2
+                    break
+                case "/":
+                    result.innerHTML = +num1 / +num2
+                    break
+            }
+
+        }
+    </script>
+</body>
+
+</html>
